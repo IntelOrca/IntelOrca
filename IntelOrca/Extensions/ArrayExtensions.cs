@@ -26,7 +26,7 @@ namespace IntelOrca.Extensions
 		/// <typeparam name="T">The array type.</typeparam>
 		/// <param name="array">The array.</param>
 		/// <returns>The array's enumerator.</returns>
-		public static IEnumerator<T> GetGenericEnumerator<T>(this T[] array)
+		public static IEnumerator<T> GetEnumeratorGeneric<T>(this T[] array)
 		{
 			return ((IEnumerable<T>)array).GetEnumerator();
 		}

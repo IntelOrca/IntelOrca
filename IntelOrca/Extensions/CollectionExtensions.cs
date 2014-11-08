@@ -27,6 +27,18 @@ namespace IntelOrca.Extensions
 				collection.Add(item);
 		}
 
+        /// <summary>
+        /// Removes multiple items from the collection.
+        /// </summary>
+        /// <typeparam name="T">The item type.</typeparam>
+        /// <param name="collection">The collection.</param>
+        /// <param name="items">The items to remove.</param>
+        public static void RemoveRange<T>(this ICollection<T> collection, IEnumerable<T> items)
+        {
+            foreach (T item in items)
+                collection.Remove(item);
+        }
+
 		/// <summary>
 		/// Removes all the elements that match the conditions defined by the specified predicate.
 		/// </summary>

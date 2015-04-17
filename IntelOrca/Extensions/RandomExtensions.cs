@@ -28,5 +28,15 @@ namespace IntelOrca.Extensions
 		{
 			return NextSignedDouble(random) * Math.PI;
 		}
+
+		public static double NextDouble(this Random random, double maxValue)
+		{
+			return random.NextDouble() * maxValue;
+		}
+
+		public static double NextDouble(this Random random, double minValue, double maxValue)
+		{
+			return minValue + (random.NextDouble() * (maxValue - minValue));
+		}
 	}
 }

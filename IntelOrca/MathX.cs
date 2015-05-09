@@ -357,5 +357,10 @@ namespace IntelOrca
 		{
 			return radians * (180.0 / Math.PI);
 		}
+
+		public static double DifferenceRadians(double a, double b)
+		{
+			return WrapDifference(a, b, -Math.PI, Math.PI);
+		}
 	}
 }
